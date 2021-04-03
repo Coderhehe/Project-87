@@ -17,7 +17,6 @@ function player_update () {
     });
 
 }
-
 function new_img(get_Img) {
     fabric.Image.fromURL(get_Img, function (Img) {
         block_object=Img;
@@ -29,7 +28,7 @@ function new_img(get_Img) {
         canvas.add(block_object);
     });
 }
-
+window.addEventListener("keydown",mykeydown);
 function mykeydown(e) {
     keypress=e.keyCode;
     console.log(keypress);    
@@ -48,25 +47,24 @@ function mykeydown(e) {
     console.log("Shift and M have been pressed together");
     }
     if (keypress=="70") {
-        new_img("ironman_face_png");
+        new_img("ironman_face.png");
+        console.log("you pressed f");
     }
     if (keypress=="66") {
-        new_img("spiderman_body_png");
+        new_img("spiderman_body.png");
     }
     if (keypress=="82") {
-        new_img("thor_right_hand_png");
+        new_img("thor_right_hand.png");
     }
     if (keypress=="72") {
-        new_img("captain_america_left_hand_png");
+        new_img("captain_america_left_hand.png");
     }
     if (keypress=="76") {
         new_img("hulk_legs.png");
     }
     if (keypress=="38") {
-        up();
-        if (keypress=="38") {
-            up();
-        }
+        up(); }
+        
         if (keypress=="39") {
             right();
         }
@@ -76,5 +74,5 @@ function mykeydown(e) {
         if (keypress=="40") {
             down();
         }
-    }
+    
 }
